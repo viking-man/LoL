@@ -22,7 +22,7 @@ import java.util.Objects;
 public class UserDomainService implements IUserDomainService {
 
     @Resource
-    private UserDaoImpl userService;
+    private UserDaoImpl userDao;
 
     @Resource
     private UserConverter userConverter;
@@ -31,7 +31,7 @@ public class UserDomainService implements IUserDomainService {
     public UserDTO registry(UserRegistryDTO registryDTO) throws BusinessException {
         QueryWrapper<UserDO> queryWrapper = new QueryWrapper<>();
         queryWrapper.lambda().eq(UserDO::getUserName, registryDTO.getUsername());
-        UserDO userDO = userService.selectOne(queryWrapper);
+        UserDO userDO = userDao.selectOne(queryWrapper);
         if (!Objects.isNull(userDO)) {
             throw new BusinessException("用户名已经被使用");
         }
@@ -43,7 +43,7 @@ public class UserDomainService implements IUserDomainService {
         userDO.setUserName(registryDTO.getUsername());
         userDO.setNickName(registryDTO.getNickname());
 
-        boolean save = userService.save(userDO);
+        boolean save = userDao.save(userDO);
         if (save) {
             return userConverter.toUserDTO(userDO);
         } else {
