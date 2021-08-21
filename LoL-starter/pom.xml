@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>starter</artifactId>
+    <artifactId>LoL-starter</artifactId>
 
     <dependencies>
         <dependency>
