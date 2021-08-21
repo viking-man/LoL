@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>LoL-user</artifactId>
+    <artifactId>LoL-dao</artifactId>
 
 
 </project>
