@@ -14,13 +14,13 @@ import javax.annotation.Resource;
  * @author jiangwei
  * @date 2021/08/21
  **/
-@RestController("/user")
+@RestController
 public class UserController {
 
     @Resource
     private UserService userService;
 
-    @PostMapping("/registry")
+    @PostMapping("/user/registry")
     public UserVO registryUser(@RequestBody UserRegistryVO userRegistryVO) throws BusinessException {
 
         return userService.registry(userRegistryVO);
