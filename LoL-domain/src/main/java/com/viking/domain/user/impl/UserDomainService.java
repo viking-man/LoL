@@ -2,7 +2,7 @@ package com.viking.domain.user.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.viking.dao.user.domain.UserDO;
-import com.viking.dao.user.service.impl.UserServiceImpl;
+import com.viking.dao.user.service.impl.UserDaoImpl;
 import com.viking.domain.user.IUserDomainService;
 import com.viking.domain.user.converter.UserConverter;
 import com.viking.domain.user.entity.UserDTO;
@@ -22,7 +22,7 @@ import java.util.Objects;
 public class UserDomainService implements IUserDomainService {
 
     @Resource
-    private UserServiceImpl userService;
+    private UserDaoImpl userService;
 
     @Resource
     private UserConverter userConverter;

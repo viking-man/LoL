@@ -1,5 +1,6 @@
 package com.viking.service.user;
 
+import com.viking.infrustructure.exception.BusinessException;
 import com.viking.service.user.entity.UserRegistryVO;
 import com.viking.service.user.entity.UserVO;
 
@@ -9,5 +10,5 @@ import com.viking.service.user.entity.UserVO;
  **/
 public interface IUserService {
 
-    UserVO registry(UserRegistryVO registryVO);
+    UserVO registry(UserRegistryVO registryVO) throws BusinessException;
 }

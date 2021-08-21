@@ -2,7 +2,7 @@ package com.viking.dao.user.service.impl;
 
 import com.viking.dao.user.domain.UserDO;
 import com.viking.dao.user.mapper.UserMapper;
-import com.viking.dao.user.service.IUserService;
+import com.viking.dao.user.service.IUserDao;
 import com.viking.dao.base.CommonServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2021-08-21
  */
 @Service
-public class UserServiceImpl extends CommonServiceImpl<UserMapper, UserDO> implements IUserService {
+public class UserDaoImpl extends CommonServiceImpl<UserMapper, UserDO> implements IUserDao {
 
 }

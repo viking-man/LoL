@@ -16,5 +16,9 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.viking</groupId>
+            <artifactId>LoL-service</artifactId>
+        </dependency>
     </dependencies>
 </project>
