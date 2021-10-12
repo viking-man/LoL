@@ -1,6 +1,7 @@
 package com.viking.api.controller.user;
 
 import com.viking.infrustructure.exception.BusinessException;
+import com.viking.service.user.entity.UserLoginVO;
 import com.viking.service.user.entity.UserRegistryVO;
 import com.viking.service.user.entity.UserVO;
 import com.viking.service.user.impl.UserService;
@@ -24,5 +25,11 @@ public class UserController {
     public UserVO registryUser(@RequestBody UserRegistryVO userRegistryVO) throws BusinessException {
 
         return userService.registry(userRegistryVO);
+    }
+
+    @PostMapping("/user/login")
+    public Boolean userLogin(@RequestBody UserLoginVO userLoginVO) throws BusinessException {
+
+        return userService.login(userLoginVO);
     }
 }

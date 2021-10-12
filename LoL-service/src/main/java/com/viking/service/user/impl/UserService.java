@@ -6,6 +6,7 @@ import com.viking.domain.user.impl.UserDomainService;
 import com.viking.infrustructure.exception.BusinessException;
 import com.viking.service.user.IUserService;
 import com.viking.service.user.converter.UserServiceConverter;
+import com.viking.service.user.entity.UserLoginVO;
 import com.viking.service.user.entity.UserRegistryVO;
 import com.viking.service.user.entity.UserVO;
 import org.springframework.stereotype.Service;
@@ -31,5 +32,11 @@ public class UserService implements IUserService {
         UserRegistryDTO registryDTO = userServiceConverter.toUserDTO(registryVO);
         UserDTO userDTO = userDomainService.registry(registryDTO);
         return userServiceConverter.toUserVO(userDTO);
+    }
+
+    @Override
+    public Boolean login(UserLoginVO userLoginVO) {
+
+        return null;
     }
 }

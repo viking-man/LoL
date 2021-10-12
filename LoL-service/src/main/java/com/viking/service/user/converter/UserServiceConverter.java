@@ -2,8 +2,10 @@ package com.viking.service.user.converter;
 
 import com.viking.dao.user.domain.UserDO;
 import com.viking.domain.user.entity.UserDTO;
+import com.viking.domain.user.entity.UserLoginDTO;
 import com.viking.domain.user.entity.UserRegistryDTO;
 import com.viking.infrustructure.config.ConverterConfig;
+import com.viking.service.user.entity.UserLoginVO;
 import com.viking.service.user.entity.UserRegistryVO;
 import com.viking.service.user.entity.UserVO;
 import org.mapstruct.Mapper;
@@ -16,6 +18,8 @@ import org.mapstruct.Mapper;
 public interface UserServiceConverter {
 
     UserRegistryDTO toUserDTO(UserRegistryVO userRegistryVO);
+
+    UserLoginDTO toUserLoginDTO(UserLoginVO userLoginVO);
 
     UserVO toUserVO(UserDTO userDTO);
 }

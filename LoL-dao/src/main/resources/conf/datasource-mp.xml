@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName">
+
+
+    <bean id="globalConfig" class="com.baomidou.mybatisplus.core.config.GlobalConfig">
+        <property name="metaObjectHandler" ref="dbMetaObjectHandler"/>
+        <property name="dbConfig" ref="dbConfig"/>
+    </bean>
+    <bean id = "dbMetaObjectHandler" class="com.tuya.zhurong.core.common.config.DBMetaObjectHandler"/>
+
+    <bean name="dbConfig" class="com.baomidou.mybatisplus.core.config.GlobalConfig$DbConfig">
+        <property name="logicDeleteField" value="status"/>
+        <property name="logicDeleteValue" value="0"/>
+        <property name="logicNotDeleteValue" value="1"/>
+        <property name="idType" value="AUTO" />
+    </bean>
+</beans>
